@@ -1,0 +1,12 @@
+version: '3'
+services:
+  vite-react-app:
+    build: .
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - VITE_HOST=0.0.0.0
+    command: npm run dev
